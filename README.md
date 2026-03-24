@@ -1,13 +1,12 @@
 # Taskly
 
-(screenshots/app.png)
+![Dashboard de tareas](screenshots/app.png)
 
 Gestor de tareas fullstack con autenticación JWT.
 
 Proyecto de portfolio que demuestra el desarrollo de una API REST con Node.js y Express, autenticación segura con JWT, y una base de datos MongoDB — con frontend en React próximamente.
 
 ---
-
 
 
 
