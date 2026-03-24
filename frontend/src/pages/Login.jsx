@@ -24,31 +24,29 @@ function Login() {
     }
 
     return (
-        <div style={{ maxWidth: '400px', margin: '100px auto', padding: '2rem' }}>
-            <h2>Iniciar sesión</h2>
-            {error && <p style={{ color: 'red' }}>{error}</p>}
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Email</label>
+        <div className="auth-container">
+            <div className="card">
+                <h2>Iniciar sesión</h2>
+                {error && <p className="error">{error}</p>}
+                <form onSubmit={handleSubmit}>
                     <input
                         type="email"
+                        placeholder="Email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        style={{ display: 'block', width: '100%', marginBottom: '1rem' }}
                     />
-                </div>
-                <div>
-                    <label>Contraseña</label>
                     <input
                         type="password"
+                        placeholder="Contraseña"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        style={{ display: 'block', width: '100%', marginBottom: '1rem' }}
                     />
-                </div>
-                <button type="submit">Entrar</button>
-            </form>
-            <p>¿No tienes cuenta? <Link to="/register">Regístrate</Link></p>
+                    <button type="submit" className="btn-primary">Entrar</button>
+                </form>
+                <p style={{ marginTop: '1rem', fontSize: '0.9rem' }}>
+                    ¿No tienes cuenta? <Link to="/register">Regístrate</Link>
+                </p>
+            </div>
         </div>
     )
 }

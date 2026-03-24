@@ -6,6 +6,9 @@ Proyecto de portfolio que demuestra el desarrollo de una API REST con Node.js y 
 
 ---
 
+
+
+
 ## Stack
 
 **Backend**
@@ -15,8 +18,8 @@ Proyecto de portfolio que demuestra el desarrollo de una API REST con Node.js y 
 - bcryptjs
 - dotenv
 
-**Frontend** *(próximamente)*
-- React + Vite
+**Frontend**
+- React + Vite *(completado)*
 - Axios
 - React Router
 
@@ -29,11 +32,11 @@ Proyecto de portfolio que demuestra el desarrollo de una API REST con Node.js y 
 - Contraseñas hasheadas con bcrypt
 - CRUD completo de tareas por usuario autenticado
 - Cada usuario solo accede a sus propias tareas
+- Interfaz React con login, registro y dashboard de tareas
+- Filtrado visual de tareas completadas / pendientes
 
 ### Próximamente
-- Interfaz React con login y dashboard de tareas
-- Filtrado por estado (completadas / pendientes)
-- Despliegue en producción
+- Despliegue
 
 ---
 
@@ -99,6 +102,10 @@ Authorization: Bearer TU_TOKEN
 **Mejoras futuras:** validación de inputs con express-validator, rate limiting, refresh tokens, restricción de CORS por dominio.
 
 ---
+
+## Capturas
+
+![Dashboard de tareas](screenshots/app.png)
 
 ## Autor
 

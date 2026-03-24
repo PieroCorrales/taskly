@@ -26,40 +26,39 @@ function Register() {
     }
 
     return (
-        <div style={{ maxWidth: '400px', margin: '100px auto', padding: '2rem' }}>
-            <h2>Crear cuenta</h2>
-            {error && <p style={{ color: 'red' }}>{error}</p>}
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Nombre</label>
-                    <input
-                        type="text"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        style={{ display: 'block', width: '100%', marginBottom: '1rem' }}
-                    />
-                </div>
-                <div>
-                    <label>Email</label>
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        style={{ display: 'block', width: '100%', marginBottom: '1rem' }}
-                    />
-                </div>
-                <div>
-                    <label>Contraseña</label>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        style={{ display: 'block', width: '100%', marginBottom: '1rem' }}
-                    />
-                </div>
-                <button type="submit">Registrarse</button>
-            </form>
-            <p>¿Ya tienes cuenta? <Link to="/login">Inicia sesión</Link></p>
+        <div className='auth-container'>
+            <div className="card">
+                <h2>Crear cuenta</h2>
+                {error && <p className='error'>{error}</p>}
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <input
+                            type="text"
+                            placeholder='Nombre'
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <input
+                            type="email"
+                            placeholder='email'
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <input
+                            type="password"
+                            placeholder='Contraseña'
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                    <button type="submit" className='btn-primary'>Registrarse</button>
+                </form>
+                <p style={{ marginTop: '1rem', fontSize: '0.9rem' }}>¿Ya tienes cuenta? <Link to="/login">Inicia sesión</Link></p>
+            </div>
         </div>
     )
 }

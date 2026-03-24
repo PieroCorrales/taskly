@@ -28,10 +28,7 @@ router.post('/', protect, async (req, res) => {
 
 router.put('/:id', protect, async (req, res) => {
   try {
-    console.log('req.user:', req.user);
-    console.log('params id:', req.params.id);
     const task = await Task.findById(req.params.id);
-    console.log('tarea encontrada:', task);
     if (!task) {
       return res.status(404).json({ message: 'Tarea no encontrada' });
     }
@@ -45,7 +42,6 @@ router.put('/:id', protect, async (req, res) => {
     );
     res.json(updated);
   } catch (error) {
-    console.log('ERROR PUT:', error.message);
     res.status(500).json({ message: error.message });
   }
 });
